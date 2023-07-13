@@ -6,6 +6,10 @@ function Header() {
 
     const menuItems = <>
             <li><Link to='/'>Home</Link></li>
+            <li><Link to='/'>About</Link></li>
+            <li><Link to='/'>Services</Link></li>
+            <li><Link to='/'>Blog</Link></li>
+            <li><Link to='/'>Contact</Link></li>
     </>
     return (
     <div className="navbar h-20 mb-12 py-12 bg-base-100">
