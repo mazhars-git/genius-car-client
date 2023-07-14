@@ -1,5 +1,6 @@
 import React from 'react';
-import loginImg from '../../../assets/images/login/login.svg';
+import loginImg from '../../../src/assets/images/login/login.svg';
+import { Link } from 'react-router-dom';
 
 function Login() {
     const handleLogin = event => {
@@ -11,7 +12,7 @@ function Login() {
                 <div className="text-center lg:text-left">
                     <img className='w-3/4' src={loginImg} alt='loginImage' />
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-20">
                 <h1 className="text-5xl font-bold">Login now!</h1>
                 
                 <form onSubmit={handleLogin} className="card-body">
@@ -34,6 +35,7 @@ function Login() {
                         <input type='submit' className="btn btn-primary" value="Login" />
                     </div>
                 </form>
+                <p className='text-center'>New to Genius Car? <Link className='text-orange-600 font-bold' to="signup">Sign Up</Link> </p>
                 </div>
             </div>
         </div>

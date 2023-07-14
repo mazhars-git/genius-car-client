@@ -1,6 +1,6 @@
 import Main from "../../Layout/Main";
 import Home from "../../Pages/Home/Home/Home";
-import Login from "../../Pages/Home/Login/Login";
+import Login from "../../Pages/Login/Login";
 
 const { createBrowserRouter } = require("react-router-dom");
 
