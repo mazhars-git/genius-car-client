@@ -24,6 +24,9 @@ function Services() {
                     ></ServiceCard>)
                 }
             </div>
+            <div className='card-actions justify-center pt-8'>
+                <button className="btn btn-outline btn-warning">More Services</button>
+            </div>
         </div>
        
     )
