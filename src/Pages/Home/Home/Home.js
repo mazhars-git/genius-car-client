@@ -4,6 +4,7 @@ import About from '../About/About';
 import Services from '../Services/Services';
 import Contact from '../Contact/Contact';
 import Products from '../../../Shared/Products/Products';
+import TeamSection from '../TeamSection/TeamSection';
 
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
             <Services></Services>
             <Contact></Contact>
             <Products></Products>
+            <TeamSection></TeamSection>
         </div>
     )
 }

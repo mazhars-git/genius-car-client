@@ -10,7 +10,7 @@ const Products = () => {
         .then(data => setProducts(data))
     }, [])
     return (
-        <div className='py-10'>
+        <div className='py-10 my-10'>
             <div className='text-center'>
                 <p className='text-red-600 font-bold'>Popular Products</p>
                 <h1 className='text-4xl font-bold my-3'>Browse Our Products</h1>
@@ -25,7 +25,7 @@ const Products = () => {
                     ></ProductCard>)
                 }
             </div>
-            <div className='card-actions justify-center pt-8'>
+            <div className='card-actions justify-center mt-10'>
                 <button className="btn btn-outline btn-warning">More Products</button>
             </div>
         </div>
