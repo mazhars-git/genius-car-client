@@ -1,15 +1,13 @@
 import React from 'react';
 
-const FeatureCard = () => {
+const FeatureCard = ({feature}) => {
+    const {img, title} = feature;
     return (
-    <div className="card w-96 bg-base-100 shadow-xl image-full">
-        <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+    <div className="card hover:bg-orange-600 hover:text-base-100 rounded-lg shadow-xl">
+        
         <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-            </div>
+            <figure><img src={img} alt="feature" /></figure>
+            <h5 className="text-xs font-bold text-center pt-2">{title}</h5>
         </div>
     </div>
     );
