@@ -5,6 +5,7 @@ import Services from '../Services/Services';
 import Contact from '../Contact/Contact';
 import Products from '../../../Shared/Products/Products';
 import TeamSection from '../TeamSection/TeamSection';
+import Features from '../Features/Features';
 
 function Home() {
     return (
@@ -15,6 +16,7 @@ function Home() {
             <Contact></Contact>
             <Products></Products>
             <TeamSection></TeamSection>
+            <Features></Features>
         </div>
     )
 }
