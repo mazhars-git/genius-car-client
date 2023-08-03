@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import FeatureCard from './FeatureCard';
 
 const Features = () => {
-    const [features, setFeatures] = useState({});
+    const [features, setFeatures] = useState([]);
     useEffect(() => {
         fetch('features.json')
         .then( res => res.json())
-        .then( data => setFeatures(data))
+        .then( data => setFeatures(data));
     }, [])
     return (
         <div className='py-10 my-10'>
