@@ -4,7 +4,7 @@ import TeamSlide from '../TeamSlide/TeamSlide';
 const TeamSection = () => {
     
     return (
-        <div className='py-10 my-10'>
+        <div className='py-5'>
             <div className='text-center'>
                 <p className='text-red-500 font-bold'>Team</p>
                 <h1 className='text-4xl font-bold my-3'>Meet Our Team</h1>
