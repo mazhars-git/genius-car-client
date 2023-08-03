@@ -1,17 +1,23 @@
 import React from 'react';
+import { BsFacebook } from 'react-icons/bs'
+import { AiFillTwitterCircle } from 'react-icons/ai'
+import { TiSocialLinkedinCircular } from 'react-icons/ti'
 
-const TeamSliderCard = ({teamMember}) => {
+const TeamSliderCard = ({member}) => {
+    const {title, designation, img} = member;
     return (
     <div className="card bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
-            <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+            <img src={img} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div className="card-body items-center text-center">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions">
-            <button className="btn btn-primary">Buy Now</button>
-            </div>
+        <div className="card items-center text-center">
+            <h2 className="card-title">{title}</h2>
+            <h6>{designation}</h6>
+        </div>
+        <div className='flex py-2 justify-center gap-2'>
+            <a href="#"><BsFacebook /></a>
+            <a href="#"><AiFillTwitterCircle /></a>
+            <a href="#"><TiSocialLinkedinCircular /></a>
         </div>
     </div>
     );

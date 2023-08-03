@@ -25,7 +25,7 @@ const TeamSlide = () => {
   },[])
  
     return (
-    <div className='sliderBox'>
+    <div className='sliderBox py-5'>
       <Swiper
         onSwiper={setSwiperRef}
         slidesPerView={3}
