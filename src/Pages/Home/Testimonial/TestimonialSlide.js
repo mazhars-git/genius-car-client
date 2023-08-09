@@ -26,9 +26,9 @@ const TestimonialSlide = () => {
     <div className='sliderBox'>
       <Swiper
         onSwiper={setSwiperRef}
-        slidesPerView={3}
+        slidesPerView={2}
         centeredSlides={true}
-        spaceBetween={30}
+        spaceBetween={25}
         navigation={true}
         modules={[ Navigation]}
         className="mySwiper"
