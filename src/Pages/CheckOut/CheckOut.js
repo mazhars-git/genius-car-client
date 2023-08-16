@@ -35,10 +35,10 @@ const CheckOut = () => {
                         </div>
                     </div>                    
                     <div className="form-control">
-                        <input type="textarea" cols="50" placeholder="Your Message" className="input input-bordered" />
+                        <textarea className="textarea textarea-primary" placeholder="Your Message"></textarea>
                     </div>
                     <div className="form-control mt-6">
-                        <input type='submit' className="btn btn-secondary" value="Order Confirm" />
+                        <input type='submit' className="btn btn-warning bg-orange-500" value="Order Confirm" />
                     </div>
                 </form>
             </form>
