@@ -4,20 +4,24 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 function SignUp() {
-    const {createUser} = useContext(AuthContext);
+    const {user, createUser} = useContext(AuthContext);
+
     const handleSignup = event => {
         event.preventDefault();
         const form = event.target;
+        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
 
         createUser(email, password)
         .then(result => {
-            const user = result.user;
-            console.log(user)
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            form.reset();
         })
         .cath(err => console.error(err));
     };
+
     return (
         <div className="hero w-full my-20">
         <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">

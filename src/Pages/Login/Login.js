@@ -4,14 +4,23 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 function Login() {
-    const { user } = useContext(AuthContext);
-    console.log(user);
+    const { signIn } = useContext(AuthContext);
+    console.log(signIn);
 
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
-        const password = form.password.value;        
+        const password = form.password.value;  
+        
+        signIn(email, password)
+        .then(result => {
+            const loggedUser = result.data;
+            console.log(loggedUser);
+        })
+        .cathe(error => {
+            console.log(error);
+        })
     };
     return (
         <div className="hero w-full my-20">
