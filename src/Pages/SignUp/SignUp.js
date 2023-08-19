@@ -6,7 +6,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 function SignUp() {
     const {user, createUser} = useContext(AuthContext);
 
-    const handleSignup = event => {
+    const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -19,7 +19,7 @@ function SignUp() {
             console.log(loggedUser);
             form.reset();
         })
-        .cath(err => console.error(err));
+        .catch(error => console.log(error));
     };
 
     return (
@@ -31,7 +31,7 @@ function SignUp() {
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-20">
             <h1 className="text-5xl text-center font-bold">Sign UP</h1>
             
-            <form onSubmit={handleSignup} className="card-body">
+            <form onSubmit={handleSignUp} className="card-body">
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Name</span>

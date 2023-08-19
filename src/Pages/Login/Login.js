@@ -17,8 +17,9 @@ function Login() {
         .then(result => {
             const loggedUser = result.data;
             console.log(loggedUser);
+            form.reset();
         })
-        .cathe(error => {
+        .catch(error => {
             console.log(error);
         })
     };
