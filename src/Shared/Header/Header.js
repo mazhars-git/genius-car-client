@@ -16,6 +16,7 @@ function Header() {
             <li className='font-semibold'><Link to='/'>Services</Link></li>
             <li className='font-semibold'><Link to='/'>Blog</Link></li>
             <li className='font-semibold'><Link to='/'>Contact</Link></li>
+            <li className='font-semibold'><Link to='/checkout'>Checkout</Link></li>
             {
                 user ? 
                 <>
