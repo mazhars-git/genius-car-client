@@ -51,7 +51,7 @@ function SignUp() {
                     <input type="text" name='password' placeholder="password" className="input input-bordered" required />
                 </div>
                 <div className="form-control mt-6">
-                    <input type='submit' className="btn btn-primary" value="Login" />
+                    <input type='submit' className="btn bg-orange-600" value="Login" />
                 </div>
             </form>
             <p className='text-center'>Already have an account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
