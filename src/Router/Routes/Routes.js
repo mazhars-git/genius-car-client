@@ -1,4 +1,5 @@
 import Main from "../../Layout/Main";
+import BookService from "../../Pages/BookService/BookService";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
@@ -17,15 +18,20 @@ const router = createBrowserRouter([
             element: <Home></Home>
         },
         {
-            path: '/login',
+            path: 'login',
             element: <Login></Login>
         },
         {
-            path: '/signup',
+            path: 'signup',
             element: <SignUp></SignUp>
         },
         {
-            path: '/checkout/:id',
+          path: 'book/:id',
+          element: <BookService></BookService>,
+          loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+        },
+        {
+            path: 'checkout/:id',
             element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
             loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
         },
