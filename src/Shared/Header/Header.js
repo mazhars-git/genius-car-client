@@ -16,10 +16,10 @@ function Header() {
             <li className='font-semibold'><Link to='/'>Services</Link></li>
             <li className='font-semibold'><Link to='/'>Blog</Link></li>
             <li className='font-semibold'><Link to='/'>Contact</Link></li>
-            <li className='font-semibold'><Link to='/checkout'>Checkout</Link></li>
             {
                 user ? 
-                <>
+                <>   
+                    <li className='font-semibold'><Link to='/bookings'>My Bookings</Link></li>
                     <span>{user.email}</span>
                     <button onClick={handleLogOut} className='font-semibold'>Sign Out</button>
                 </> :
