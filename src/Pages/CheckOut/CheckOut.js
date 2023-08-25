@@ -1,9 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import checkOutBg from '../../assets/images/checkout/checkout.png';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import ReactDatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
 const CheckOut = () => {
+    const [startDate, setStartDate] = useState(new Date());
     const service = useLoaderData();
     const {title, _id, price, img} = service;
     const {user} = useContext(AuthContext);
@@ -36,7 +39,10 @@ const CheckOut = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-        })
+            if(data.insertedId) {
+                alert('booking successfully')
+        }});
+        form.reset();
     }
     return (
         <>
@@ -65,8 +71,7 @@ const CheckOut = () => {
                         <label className="label">
                             <span className="label-text">Date</span>
                         </label>
-                        <input type="date" name="date" 
-                        className="input input-bordered input-success w-full" />
+                        <ReactDatePicker className="input input-bordered input-success w-full" selected={startDate} onChange={(date) => setStartDate(date)} />
                     </div>
                     <div className="form-control">
                         <label className="label">
