@@ -4,9 +4,11 @@ import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReactDatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import Swal from 'sweetalert2';
 
 const CheckOut = () => {
     const [startDate, setStartDate] = useState(new Date());
+    const Swal = require('sweetalert2');
     const service = useLoaderData();
     const {title, _id, price, img} = service;
     const {user} = useContext(AuthContext);
@@ -40,7 +42,13 @@ const CheckOut = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId) {
-                alert('booking successfully')
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Booking Added Done!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
         }});
         form.reset();
     }
@@ -71,7 +79,7 @@ const CheckOut = () => {
                         <label className="label">
                             <span className="label-text">Date</span>
                         </label>
-                        <ReactDatePicker className="input input-bordered input-success w-full" selected={startDate} onChange={(date) => setStartDate(date)} />
+                        <ReactDatePicker className="input input-bordered input-success w-full" name='date' selected={startDate} onChange={(date) => setStartDate(date)} />
                     </div>
                     <div className="form-control">
                         <label className="label">
