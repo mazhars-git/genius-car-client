@@ -1,5 +1,3 @@
-import React from 'react';
-
 const BookingRow = ({booking}) => {
     const {customerName, email, date, service, price, img} = booking;
     return (
@@ -12,7 +10,7 @@ const BookingRow = ({booking}) => {
             <td>
                 <div className="avatar">
                     <div className="mask rounded w-24 h-24">
-                        <img src={img} alt="Item picture" />
+                        {img && <img src={img} alt="Item picture" />}
                     </div>
                 </div>
             </td>
