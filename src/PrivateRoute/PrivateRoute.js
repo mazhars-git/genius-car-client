@@ -9,7 +9,9 @@ const PrivateRoute = ({children}) => {
         return <div className='text-center py-10'>
             <span className="loading loading-dots bg-orange-500 loading-lg"></span>        
         </div>
-        
+    }
+    if(user?.email) {
+        return children;
     }
     
     if(user){
