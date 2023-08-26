@@ -11,21 +11,23 @@ function Header() {
         .catch(error => console.log(error)); 
     }
 
-    const menuItems = <>
-            <li className='font-semibold'><Link to='/'>Home</Link></li>
-            <li className='font-semibold'><Link to='/'>Services</Link></li>
-            <li className='font-semibold'><Link to='/'>Blog</Link></li>
-            <li className='font-semibold'><Link to='/'>Contact</Link></li>
-            {
-                user ? 
-                <>   
-                    <li className='font-semibold'><Link to='/bookings'>My Bookings</Link></li>
-                    <span>{user.email}</span>
-                    <button onClick={handleLogOut} className='font-semibold'>Sign Out</button>
-                </> :
-                <li className='font-semibold'><Link to='/login'>Login</Link></li>
-            }
-    </>
+    const menuItems = 
+        <>
+                <li className='font-semibold'><Link to='/'>Home</Link></li>
+                <li className='font-semibold'><Link to='/'>Services</Link></li>
+                <li className='font-semibold'><Link to='/'>Blog</Link></li>
+                <li className='font-semibold'><Link to='/'>Contact</Link></li>
+                {
+                    user ? 
+                    <>   
+                        <li className='font-semibold'><Link to='/bookings'>My Bookings</Link></li>
+                        <li className='font-semibold p-2'>{user.email}</li>
+                        <button onClick={handleLogOut} className='font-semibold ml-2'>Sign Out</button>
+                    </> :
+                    <li className='font-semibold'><Link to='/login'>Login</Link></li>
+                }
+        </>
+
     return (
     <div className="navbar h-20 mb-12 bg-base-100">
         <div className="navbar-start">
