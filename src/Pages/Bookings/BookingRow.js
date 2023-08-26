@@ -1,4 +1,3 @@
-import Swal from "sweetalert2";
 
 const BookingRow = ({ booking }) => {
     const Swal = require('sweetalert2');
@@ -11,8 +10,8 @@ const BookingRow = ({ booking }) => {
                 text: "You won't be able to revert this!",
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#70e000',
+                cancelButtonColor: '#ff0054',
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
@@ -25,9 +24,9 @@ const BookingRow = ({ booking }) => {
             });
 
         if(proceed) {
-            fetch(`http://localhost:5000/bookings/${id}`, {
-                method: 'DELETE',
+            fetch(`http://localhost:5000/bookings/${id}`,{
 
+                method: 'DELETE'
             })
             .then(res => res.json())
             .then(data => {
