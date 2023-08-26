@@ -5,6 +5,7 @@ import BookingRow from './BookingRow';
 const Bookings = () => {
     const {user} = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
+    const Swal = require('sweetalert2');
 
     const url = `http://localhost:5000/bookings?email=${user?.email}`;
     useEffect(() =>{
@@ -12,6 +13,44 @@ const Bookings = () => {
         .then(res => res.json())
         .then(data => setBookings(data));
     }, [])
+
+    const handleDelete = id => {
+        const proceed = 
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#70e000',
+                cancelButtonColor: '#ff0054',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+                }
+            });
+
+        if(proceed) {
+            fetch(`http://localhost:5000/bookings/${id}`,{
+
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.deletedCount > 0){
+                    const remaining = bookings.filter(booking => booking._id !== id);
+                    setBookings(remaining);
+                }
+            })
+        }
+    }
+
+
     return (
         <div>
             <h2 className='text-5xl font-bold py-4'>Your Bookings: {bookings.length}</h2>
@@ -38,6 +77,7 @@ const Bookings = () => {
                         bookings.map(booking => <BookingRow
                         key={booking._id}
                         booking={booking}
+                        handleDelete={handleDelete}
                         ></BookingRow>)
                     }                   
                 </tbody>

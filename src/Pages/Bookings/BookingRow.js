@@ -1,39 +1,8 @@
 
-const BookingRow = ({ booking }) => {
-    const Swal = require('sweetalert2');
-    const { _id, customerName, email, date, service, price, img } = booking;
+const BookingRow = ({ booking, handleDelete }) => {
+        const { _id, customerName, email, date, service, price, img } = booking;
 
-    const handleDelete = id => {
-        const proceed = 
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#70e000',
-                cancelButtonColor: '#ff0054',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                Swal.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                )
-                }
-            });
-
-        if(proceed) {
-            fetch(`http://localhost:5000/bookings/${id}`,{
-
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            })
-        }
-    }
+   
     return (
         <tr>
             <th>
