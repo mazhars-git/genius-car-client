@@ -49,7 +49,7 @@ function Login() {
                     </label>
                     </div>
                     <div className="form-control mt-6">
-                        <input type='submit' className="btn btn-primary" value="Login" />
+                        <input type='submit' className="btn bg-red-600 text-white" value="Login" />
                     </div>
                 </form>
                 <p className='text-center'>New to Genius Car? <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
