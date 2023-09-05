@@ -8,7 +8,7 @@ import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
@@ -37,5 +37,3 @@ const router = createBrowserRouter([
       ]
     }
   ]);
-
-  export default router;
