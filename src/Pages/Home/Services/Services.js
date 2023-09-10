@@ -9,6 +9,7 @@ function Services() {
         .then(res => res.json())
         .then(data => setServices(data))
     }, [])
+    
     return (
         <div className='pb-8'>
             <div className='my-12 text-center'>

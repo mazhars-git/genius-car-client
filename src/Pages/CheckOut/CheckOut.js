@@ -4,7 +4,6 @@ import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReactDatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import Swal from 'sweetalert2';
 
 const CheckOut = () => {
     const [startDate, setStartDate] = useState(new Date());

@@ -3,7 +3,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import BookingRow from './BookingRow';
 
 const Bookings = () => {
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
     const Swal = require('sweetalert2');
 
@@ -48,7 +48,7 @@ const Bookings = () => {
                 }
             })
         }
-    }
+    };
 
     const handleConfirm = id => {
         fetch(`http://localhost:5000/bookings/${id}`, {
@@ -71,9 +71,7 @@ const Bookings = () => {
                 setBookings(newBookings);
             }
         })
-
     }
-
 
     return (
         <div>

@@ -2,6 +2,7 @@ import Main from "../../Layout/Main";
 import Bookings from "../../Pages/Bookings/Bookings";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 import Home from "../../Pages/Home/Home/Home";
+import ServiceDetails from "../../Pages/Home/ServiceDetails/ServiceDetails";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 import PrivateRoute from "../../PrivateRoute/PrivateRoute";
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
         {
           path: 'bookings',
           element: <PrivateRoute><Bookings></Bookings></PrivateRoute>,
+        },
+        {
+          path: 'serviceDetails',
+          element: <ServiceDetails></ServiceDetails>,
         },
       ]
     }
