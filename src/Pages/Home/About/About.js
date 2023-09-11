@@ -24,7 +24,7 @@ function About() {
                 <br></br>
                     The majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
                 </p>
-                <button className="btn btn-warning">Get More Info</button>
+                <button className="btn btn-warning mt-5">Get More Info</button>
             </div>
             </div>
         </div>
