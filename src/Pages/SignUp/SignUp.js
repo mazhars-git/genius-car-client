@@ -29,7 +29,7 @@ function SignUp() {
                 <img className='w-3/4' src={loginImg} alt='loginImage' />
             </div>
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-20">
-            <h1 className="text-5xl text-center font-bold">Sign UP</h1>
+            <h1 className="text-5xl text-center font-bold">Sign Up Here!!</h1>
             
             <form onSubmit={handleSignUp} className="card-body">
                 <div className="form-control">
