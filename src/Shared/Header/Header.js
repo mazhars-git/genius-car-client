@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.svg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import '../../Css/Header.css';
 
 function Header() {
     const {user, logOut} = useContext(AuthContext);
@@ -14,7 +15,7 @@ function Header() {
     const menuItems = 
         <>
                 <li className='font-semibold'><Link to='/'>Home</Link></li>
-                <li className='font-semibold'><Link to='/'>Services</Link></li>
+                <li className='font-semibold'><Link to='/services'>Services</Link></li>
                 <li className='font-semibold'><Link to='/'>Blog</Link></li>
                 <li className='font-semibold'><Link to='/'>Contact</Link></li>
                 {

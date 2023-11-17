@@ -10,7 +10,7 @@ import BannerItem from './BannerItem';
 const bannerData = [
     {
         image: img1,
-        prev: 4,
+        prev: 6,
         id: 1,
         next: 2
     }, 
@@ -30,6 +30,18 @@ const bannerData = [
         image: img4,
         prev: 3,
         id: 4,
+        next: 5
+    }, 
+    {
+        image: img5,
+        prev: 4,
+        id: 5,
+        next: 6
+    }, 
+    {
+        image: img6,
+        prev: 5,
+        id: 6,
         next: 1
     }, 
 ]
