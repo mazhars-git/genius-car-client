@@ -5,7 +5,7 @@ import ServiceCard from './ServiceCard';
 function Services() {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://genius-car-server-fu0g.onrender.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     }, [])

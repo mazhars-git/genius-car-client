@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
         {
             path: 'checkout/:id',
             element: <CheckOut></CheckOut>,
-            loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+            loader: ({params}) => fetch(`https://genius-car-server-fu0g.onrender.com/services/${params.id}`)
         },
         {
           path: 'bookings',
@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
         {
           path: 'serviceDetails/:id',
           element: <ServiceDetails></ServiceDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+          loader: ({params}) => fetch(`https://genius-car-server-fu0g.onrender.com/services/${params.id}`)
         },
       ]
     }

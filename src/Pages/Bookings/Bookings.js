@@ -7,7 +7,7 @@ const Bookings = () => {
     const [bookings, setBookings] = useState([]);
     const Swal = require('sweetalert2');
 
-    const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    const url = `https://genius-car-server-fu0g.onrender.com/bookings?email=${user?.email}`;
     useEffect(() =>{
         fetch(url)
         .then(res => res.json())
@@ -35,7 +35,7 @@ const Bookings = () => {
             });
 
         if(proceed) {
-            fetch(`http://localhost:5000/bookings/${id}`,{
+            fetch(`https://genius-car-server-fu0g.onrender.com/bookings/${id}`,{
 
                 method: 'DELETE'
             })
@@ -51,7 +51,7 @@ const Bookings = () => {
     };
 
     const handleConfirm = id => {
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://genius-car-server-fu0g.onrender.com/bookings/${id}`, {
 
             method: 'PATCH',
             headers: {

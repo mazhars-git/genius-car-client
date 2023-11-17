@@ -30,7 +30,7 @@ const CheckOut = () => {
         }
         console.log(booking);
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://genius-car-server-fu0g.onrender.com/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
