@@ -61,6 +61,10 @@
   .swiper-button-prev, .swiper-button-next{
     background-color: orangered;
     color: #fff;
-    padding: 35px;
+    padding: 25px;
     border-radius: 35px;
+  }
+  .swiper-button-prev:after, .swiper-button-next:after{
+    font-family: swiper-icons;
+    font-size: 15px;
   }

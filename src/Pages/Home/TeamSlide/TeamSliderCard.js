@@ -11,11 +11,11 @@ const TeamSliderCard = ({member}) => {
         <figure className="px-6 pt-10">
             <img src={img} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div className="card items-center text-center">
-            <h2 className="card-title font-bold text-2xl pt-3">{title}</h2>
+        <div className="text-center">
+            <h2 className="font-bold text-2xl pt-3">{title}</h2>
             <h6 className='pb-3'>{designation}</h6>
         </div>
-        <div className='flex py-4 justify-center gap-2'>
+        <div className='flex py-2 justify-center gap-2'>
             <a href="#"><img src={fbIcon} alt="" /></a>
             <a href="#"><img src={twitIcon} alt="" /></a>
             <a href="#"><img src={linkIcon} alt="" /></a>
